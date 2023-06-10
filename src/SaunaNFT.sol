@@ -9,8 +9,8 @@ contract SaunaNFT is ISaunaNFT, ERC721A {
         // solhint-disable-previous-line no-empty-blocks
     }
 
-    function mint() external {
-        uint256 tokenId = _nextTokenId();
+    function mint() external returns (uint256 tokenId) {
+        tokenId = _nextTokenId();
 
         _safeMint(msg.sender, 1);
 
