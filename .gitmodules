@@ -6,8 +6,8 @@
   branch = "release-v0"
   path = "lib/prb-test"
   url = "https://github.com/PaulRBerg/prb-test"
-[submodule "lib/contracts"]
-	path = lib/contracts
+[submodule "lib/tokenbound"]
+	path = lib/tokenbound
 	url = https://github.com/tokenbound/contracts
 [submodule "lib/erc721a"]
 	path = lib/erc721a
