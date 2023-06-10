@@ -8,4 +8,12 @@ contract SaunaNFT is ISaunaNFT, ERC721A {
     constructor() ERC721A("SaunaNFT", "SAUNA") {
         // solhint-disable-previous-line no-empty-blocks
     }
+
+    function mint() external {
+        uint256 tokenId = _nextTokenId();
+
+        _safeMint(msg.sender, 1);
+
+        emit SaunaNFTMinted(msg.sender, tokenId);
+    }
 }

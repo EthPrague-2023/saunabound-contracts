@@ -1,4 +1,4 @@
-@openzeppelin/=lib/openzeppelin-contracts/contracts
+@openzeppelin/=lib/tokenbound/lib/openzeppelin-contracts/contracts
 @erc721a/=lib/erc721a/contracts/
 @tokenbound/=lib/tokenbound/src/
 @prb/test/=lib/prb-test/src/
