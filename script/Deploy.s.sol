@@ -12,20 +12,14 @@ contract Deploy is BaseScript {
     IERC6551 public constant ERC6551_REGISTRY = IERC6551(0x02101dfB77FDE026414827Fdc604ddAF224F0921);
 
     function run() public broadcaster {
-        SaunaNFT nft = new SaunaNFT();
         SaunaBoundWallet wallet = new SaunaBoundWallet();
+        SaunaNFT nft = new SaunaNFT(ERC6551_REGISTRY, address(wallet));
 
-        uint256 tokenId = nft.mint();
+        (uint256 tokenId, address account) = nft.mint();
 
-        address account = ERC6551_REGISTRY.createAccount(
-            address(wallet),
-            block.chainid,
-            address(nft),
-            tokenId,
-            uint256(keccak256(abi.encode(address(wallet), block.chainid, address(nft), tokenId))),
-            ""
-        );
-
+        console.log("Wallet implementation at %s", address(wallet));
+        console.log("NFT collection deployed at %s", address(nft));
+        console.log("NFT with tokenId %s minted", tokenId);
         console.log("Account created at %s", account);
     }
 }

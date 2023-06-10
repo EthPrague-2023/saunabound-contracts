@@ -28,5 +28,5 @@ interface IERC6551 {
     )
         external
         view
-        returns (address);
+        returns (address account);
 }

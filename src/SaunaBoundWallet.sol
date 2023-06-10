@@ -11,9 +11,9 @@ contract SaunaBoundWallet is ISaunaBoundWallet, Initializable {
         _disableInitializers();
     }
 
-    function initalize() external initializer {
-        // todo:
-    }
+    // function initalize() external initializer {
+    // todo:
+    // }
 
     /// @inheritdoc ISaunaBoundWallet
     function owner() public view override returns (address) {
@@ -48,6 +48,6 @@ contract SaunaBoundWallet is ISaunaBoundWallet, Initializable {
 
     /// @inheritdoc IERC1271
     function isValidSignature(bytes32 hash, bytes memory signature) external view returns (bytes4 magicValue) {
-        // todo:
+        // todo: implement
     }
 }
