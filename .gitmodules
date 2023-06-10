@@ -9,3 +9,6 @@
 [submodule "lib/contracts"]
 	path = lib/contracts
 	url = https://github.com/tokenbound/contracts
+[submodule "lib/erc721a"]
+	path = lib/erc721a
+	url = https://github.com/chiru-labs/erc721a
