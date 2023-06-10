@@ -114,6 +114,13 @@ $ forge build
 
 ### Coverage
 
+# Deployed Contracts
+
+- SaunaNFT: 0xcea5049d652b5efd856bb5e9a4e52226037d7c82
+
+
+
+
 Get a test coverage report:
 
 ```sh

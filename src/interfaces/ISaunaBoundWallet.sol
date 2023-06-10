@@ -16,7 +16,7 @@ interface ISaunaBoundWallet is IAccount, IERC1271, IERC165 {
      * @return collection The ERC721 contract address of the token which owns this account.
      * @return tokenId The tokenId of the NFT which owns this account.
      */
-    function token() external view returns (address collection, uint256 tokenId);
+    function token() external view returns (uint256 chainId, address tokenContract, uint256 tokenId);
 
     /**
      * @dev Executes a transaction from the Account.
